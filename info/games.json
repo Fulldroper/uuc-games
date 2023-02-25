@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Game 1",
+    "img": "./assets/images/game_1.jpg",
+    "host": "game-1.uuc-games.party",
+    "rules": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium magnam excepturi laboriosam sapiente, odit commodi officiis cum nihil culpa eum neque dignissimos eaque! Ad iure quidem velit quam illum. Omnis corporis, nisi voluptatem optio ducimus reiciendis voluptate, adipisci accusamus itaque consectetur in quis reprehenderit eius? Velit, repudiandae unde expedita possimus, eveniet quam incidunt minus veritatis, quasi asperiores cum eos. Iusto temporibus, modi voluptates error soluta sequi tempore eius! Aut ipsa ab esse minima dolores ducimus inventore voluptas soluta magni explicabo repellendus veniam deserunt incidunt ipsum necessitatibus, eaque, mollitia sapiente. Pariatur natus accusamus, unde ratione dolorum provident veniam et dignissimos a veritatis architecto. Magni laborum aliquid explicabo, rem, architecto cum rerum aliquam placeat impedit, fuga minus dolorum labore culpa facere! Dolorem repellat eaque doloribus tempore nostrum velit non, placeat obcaecati qui voluptates magnam iste explicabo exercitationem hic dolores sapiente itaque nobis consectetur facere rerum maiores voluptate asperiores? Animi, corporis alias?"
+  },
+  {
+    "name": "Game 2",
+    "img": "./assets/images/game_2.jpg",
+    "host": "game-2.uuc-games.party",
+    "rules": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium magnam excepturi laboriosam sapiente, odit commodi officiis cum nihil culpa eum neque dignissimos eaque! Ad iure quidem velit quam illum. Omnis corporis, nisi voluptatem optio ducimus reiciendis voluptate, adipisci accusamus itaque consectetur in quis reprehenderit eius? Velit, repudiandae unde expedita possimus, eveniet quam incidunt minus veritatis, quasi asperiores cum eos. Iusto temporibus, modi voluptates error soluta sequi tempore eius! Aut ipsa ab esse minima dolores ducimus inventore voluptas soluta magni explicabo repellendus veniam deserunt incidunt ipsum necessitatibus, eaque, mollitia sapiente. Pariatur natus accusamus, unde ratione dolorum provident veniam et dignissimos a veritatis architecto. Magni laborum aliquid explicabo, rem, architecto cum rerum aliquam placeat impedit, fuga minus dolorum labore culpa facere! Dolorem repellat eaque doloribus tempore nostrum velit non, placeat obcaecati qui voluptates magnam iste explicabo exercitationem hic dolores sapiente itaque nobis consectetur facere rerum maiores voluptate asperiores? Animi, corporis alias?"
+  },
+  {
+    "name": "Game 3",
+    "img": "./assets/images/game_3.jpg",
+    "host": "game-3.uuc-games.party",
+    "rules": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates praesentium magnam excepturi laboriosam sapiente, odit commodi officiis cum nihil culpa eum neque dignissimos eaque! Ad iure quidem velit quam illum. Omnis corporis, nisi voluptatem optio ducimus reiciendis voluptate, adipisci accusamus itaque consectetur in quis reprehenderit eius? Velit, repudiandae unde expedita possimus, eveniet quam incidunt minus veritatis, quasi asperiores cum eos. Iusto temporibus, modi voluptates error soluta sequi tempore eius! Aut ipsa ab esse minima dolores ducimus inventore voluptas soluta magni explicabo repellendus veniam deserunt incidunt ipsum necessitatibus, eaque, mollitia sapiente. Pariatur natus accusamus, unde ratione dolorum provident veniam et dignissimos a veritatis architecto. Magni laborum aliquid explicabo, rem, architecto cum rerum aliquam placeat impedit, fuga minus dolorum labore culpa facere! Dolorem repellat eaque doloribus tempore nostrum velit non, placeat obcaecati qui voluptates magnam iste explicabo exercitationem hic dolores sapiente itaque nobis consectetur facere rerum maiores voluptate asperiores? Animi, corporis alias?"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  { "url": "https://discord.gg/uuc", "ico": "./assets/images/discord.svg" },
+  {
+    "url": "https://www.youtube.com/channel/UC9QXcizwufnAaidYa2hCTkw",
+    "ico": "./assets/images/youtube.svg"
+  },
+  {
+    "url": "https://www.tiktok.com/@unukrcomm",
+    "ico": "./assets/images/tiktok.svg"
+  },
+  {
+    "url": "https://steamcommunity.com/groups/uuc_cs",
+    "ico": "./assets/images/steam.svg"
+  },
+  {
+    "url": "https://open.spotify.com/show/3J0FpBgAHU2exqNh0wGUHx?si=b258463bacb64a90&nd=1",
+    "ico": "./assets/images/spotify.svg"
+  }
+]
