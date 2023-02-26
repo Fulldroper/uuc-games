@@ -1,0 +1,37 @@
+---
+
+---
+<div class="topbar">
+  <div>
+    <div class="burger-ico"></div>
+  </div>
+  <div>
+    <div class="logo"></div>
+    <div class="title">"ЄУК" GAMES</div>
+  </div>
+</div>
+<script>
+  let isShowNavbar = false;
+  const navbar = document.querySelector("div.nav")
+  const burger = document.querySelector("div.burger-ico")
+  const content = document.querySelector("body > div.page")
+  
+  burger.onclick = () => {
+    const e = () => {
+      content.onclick = undefined
+      navbar.onclick = undefined
+      burger.dispatchEvent(new Event("click", {}))
+    }
+    if (isShowNavbar) {
+      navbar.style.left = ``
+      content.onclick = undefined
+      navbar.onclick = undefined
+    } else {
+      content.onclick = e
+      navbar.onclick = e
+      navbar.style.left = `0px`
+    }
+  
+    isShowNavbar = !isShowNavbar
+  }
+</script>

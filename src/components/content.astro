@@ -1,0 +1,44 @@
+---
+import team from "../../public/info/team.json"
+
+export interface Props {
+  games: any; // change @@@
+}
+
+const { games } = Astro.props
+---
+<div class="page scroll">
+  <div id="games">
+    <div class="title">Ігри</div>
+    <div class="list">
+      { games.map((game) => <div><div class="img" style={`background-image: url("${game.img}")`} id={game.name}></div><div class="title">{game.name}</div></div>) }
+    </div>
+  </div>
+  <div id="about">
+    <div class="title">Про нас</div>
+    <div>
+      <!-- import this @@@ -->
+      <b>«Єдине Україномовне Ком'юніті» (скорочено - ЄУК)</b> - спільнота, що просуває українську мову в інтернеті та підтримує україномовний контент будь-якого формату. На нашому дискорд сервері ви зможете побачити та поспілкуватися з україномовними авторами контенту. Крім того, сервер відомий своєю специфічною аудиторією, що, безперечно, є родзинкою спільноти. Велика кількість тематичних каналів в яких ви можете обговорювати кіновитвори різного виду, поспілкуватися з іноземцями, поділитися артами, музикою, обговорити книги, комікси, мангу тощо, реготати, як кінь, після перегляду неймовірних мемів та фотожаб, та, звісно ж, грати з друзями. Зацікавило? Тоді приєднуйся!
+    </div>
+  </div>
+  { games.map((game) => 
+    <div class="game" id={game.name.replace(" ","")}>
+      <div class="title">{game.name}</div>
+      <div class="content">
+        <div class="card">
+          <div class="img" style={`background-image: url("${game.img}")`}></div>
+          <a href={`http://${game.host}/`} class="btn" target="_blank">Створити гру</a>
+        </div>
+        <div class="description">
+          {game.rules}
+        </div>
+      </div>
+    </div>
+  )}
+  <div id="team">
+    <div class="title">Наша команда</div>
+    <div class="list">
+      { team.map((bro) => <div>{bro.position}<a href={bro.url}> @{bro.name}</a></div> ) }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+---
+import social from "../../public/info/social.json"
+
+export interface Props {
+  games: any; // change @@@
+}
+
+const { games } = Astro.props
+---
+<div class="nav">
+  <div>
+    <div class="logo"></div>
+    <div class="title">"ЄУК" GAMES</div>
+  </div>
+  <a href="#games">Ігри
+  </a>
+  { games.map((game, i, arr) => <a class="sub" href={`#${game.name.replace(" ","")}`}>{game.name}</a>) }
+  <a href="#about" >Про нас</a>
+  <a href="#team">Розробники</a>
+  <a href="./docs/privacy.md">Конфіденційність</a>
+  <a href="./docs/terms.md">Користувацька угода</a>
+  <div>
+    { social.map((btn) => <a href={btn.url} style={`background-image: url("${btn.ico}")`} target="_blank"></a>) }
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import "../styles/style.css"
+
+import games from "../../public/info/games.json"
+
+import Content from "../components/content.astro";
+import Loading from "../components/loading.astro";
+import Navbar from "../components/navbar.astro";
+import Topbar from "../components/topbar.astro";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
+  <title>"ЄУК" GAMES</title>
+</head>
+<body>
+	<Loading />
+	<Navbar games={games} />
+	<Topbar />
+	<Content games={games} />
+</body>
+</html>

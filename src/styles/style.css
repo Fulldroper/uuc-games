@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "montserrat-bolt";
+  src: url("./assets/fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
+}
+/* 1025 */
+@media screen and (max-width: 1024px){
+  body > .topbar {
+    display: flex !important;
+    z-index: 1;
+    position: fixed;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
+
+  body {
+    padding-top: 40px;
+  }
+
+  body > .page {
+    margin-left: 0px !important;
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    height: 100%;
+  }
+
+  body > .nav {
+    top: 40px !important;    
+    left: -350px;
+    height: calc(100vh - 40px) !important;
+  }
+}
+@media screen and (min-width: 1024px){
+  body > .nav {
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  body > .nav {
+    max-width: calc(100% - 50px) !important;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  body > .page > .game > .content {
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+}
+
+:root {
+  --font-size-0: 40px;
+  --font-size-1: 20px;
+  --font-size-2: 18px;
+  --font-size-3: 16px;
+  --font-size-4: 14px;
+  
+  --font-weight-1: 500px;
+  --font-weight-2: 550px;
+  
+  --text-color-1: #ffffff;
+  --text-color-2: #dcddde;
+  --text-color-3: #b9bbbe;
+  --text-color-4: #6b6c6f;
+  --text-color-link: #6b9dea;
+  
+  --bg-colog-0: #18191c;
+  --bg-color-1: #2f3136;
+  --bg-color-2: #36393f;
+  --bg-color-3: #303339;
+  --bg-color-hover: #292b2f;
+  --color-green: #43B581;
+  
+  --btn-color-1: rgb(94, 75, 201);
+  
+  --icons-size: 100px;
+  
+  --img-logo: url("./assets/images/logo.svg");
+  --burger-ico: url("./assets/images/ico-burger.svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}
+
+html {
+  max-width: 100vw;
+  min-height: 100vh;
+  /* width: 100vw; */
+  height: 100%;
+  background-color: var(--bg-color-2);
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  background-color: var(--bg-color-2);
+}
+
+body > .topbar {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-colog-0);
+}
+
+body > .topbar > * {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > .topbar > :last-child {
+  margin: 0px !important;
+}
+
+body > .topbar > :first-child > .burger-ico {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: var(--burger-ico);
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+body > .nav {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  
+  width: 100%;
+  max-width: 350px;
+  background-color: var(--bg-color-1);
+  padding: 32px;
+  box-sizing: border-box;
+  font-weight: var(--font-weight-2);
+  font-family: 'montserrat-regular';
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+
+  transition: left .25s;
+}
+
+body > .nav > * {
+  color: var(--text-color-3);
+  font-size: var(--font-size-3);
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body > .nav > a.sub {
+  margin-left: 15px;
+  color: var(--text-color-4);
+}
+
+body > .nav > a.sub:hover::before {
+  content: '‣';
+  margin-right: 5px;
+}
+body > .nav > a.sub:hover {
+  color: var(--text-color-1);
+  margin-left: 4.5px;
+}
+
+body > .nav > :hover {
+  color: var(--text-color-1);
+}
+
+body > .nav > :first-child:hover {
+  opacity: .8;
+}
+
+body > .nav > :first-child, body > .topbar > :last-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+body > .nav > :first-child > .logo, body > .topbar > :last-child > .logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: var(--img-logo);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > .nav > :first-child > .title, body > .topbar > :last-child > .title {
+  color: var(--text-color-1);
+  font-weight: var(--font-weight-1);
+  font-family: 'montserrat-bolt';
+}
+
+body > .nav > :last-child {
+  margin-top:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  cursor: auto;
+}
+
+body > .nav > :last-child > * {
+  width: 24px;
+  height: 24px;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+body > .nav > :last-child > *:hover {
+  opacity: .8;
+}
+
+body > .page {
+  margin-left: 350px;
+  
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  color: var(--text-color-3);
+  font-size: var(--font-size-1);
+}
+
+body > .page > div > .title {
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-2);
+  font-family: 'montserrat-bolt';
+  color: var(--text-color-1);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+body > .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+  background-color: var(--bg-color-3);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+body > .loading > img {
+  width: 150px;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    z-index: 2;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+body > .page > #games > .list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body > .page > #games > .list > div {
+  width: 207px;
+  height: 238px;
+  background-color: var(--bg-color-1);
+  border-radius: 10px;
+  transition: transform .25s;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body > .page > #games > .list > div:hover {
+  transform: translate(0px,-10px);
+
+  -webkit-box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+  box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+
+  background-color: var(--bg-color-hover);
+}
+
+body > .page > #games > .list > div > .img {
+  width: 180px;
+  height: 180px;
+  background-color: var(--bg-colog-0);
+  border-radius: 10px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > .page > #games > .list > div:hover > .title {
+  color: var(--text-color-1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-link);
+}
+
+body > .page > .team > .list {
+  display: flex;
+  flex-direction: row;
+}
+
+body > .page > .team > .list > div {
+  margin: 10px;
+}
+
+.offline {
+  border: red solid 2px;
+  -webkit-filter: grayscale(100%) blur(2px); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) blur(2px);
+}
+
+.scroll {
+  scrollbar-color: var(--bg-color-1);
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--bg-colog-0) var(--bg-color-1);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-color-1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bg-colog-0);
+  border-radius: 10px;
+  border: 3px solid  var(--bg-color-1);
+}
+
+body > .page > .game > .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+body > .page > .game > .content > .description {
+  max-width: 600px;
+  width: 100%;
+  min-width: 260px;
+  height: 450px;
+  min-height: 450px;
+  max-height: 450px;
+  overflow-x: auto;
+}
+
+body > .page > .game > .content > .card {
+  width: 350px;
+  min-width: 350px;
+  max-width: 350px;
+  height: 450px;
+  min-height: 450px;
+  max-height: 450px;
+  background-color: var(--bg-color-1);
+  border-radius: 15px;
+  margin-right: 35px;
+  margin-bottom: 35px;
+
+  border-radius: 10px;
+  transition: transform .25s;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  cursor: pointer;
+}
+
+body > .page > .game > .content > .card > .img {
+  width: 310px;
+  height: 370px;
+  background-color: var(--bg-colog-0);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body > .page > .game > .content > .card:hover {
+  transform: translate(0px,-10px);
+
+  -webkit-box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+  box-shadow: 2px 19px 40px 0px rgba(0,0,0,0.3);
+
+  background-color: var(--bg-color-hover);
+}
+
+body > .page > .game > .content > .card > .btn {
+  background-color: var(--color-green);
+  color: var(--text-color-1);
+  padding: 10px 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "montserrat-bolt";
+}
